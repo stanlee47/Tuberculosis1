@@ -12,9 +12,14 @@ from sklearn.tree import DecisionTreeClassifier
 from mlflow.models import infer_signature
 from sklearn.model_selection import train_test_split,GridSearchCV
 
-os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/stanlykurian22/Tuberculosis.mlflow"
-os.environ['MLFLOW_TRACKING_USERNAME']='stanlykurian22'
-os.environ['MLFLOW_TRACKING_PASSWORD']='ef30f92caf745c1288394a5355e6503dc1eb9a28'
+from dotenv import load_dotenv
+
+load_dotenv()  # Loads variables from .env file
+
+os.environ["MLFLOW_TRACKING_URI"] = os.getenv("MLFLOW_TRACKING_URI")
+os.environ["MLFLOW_TRACKING_USERNAME"] = os.getenv("MLFLOW_TRACKING_USERNAME")
+os.environ["MLFLOW_TRACKING_PASSWORD"] = os.getenv("MLFLOW_TRACKING_PASSWORD")
+
 
 def hyperparmeter_tuning(x_train,y_train):
     best_model=None

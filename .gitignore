@@ -1,0 +1,35 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment folders
+venv/
+.env/  # if your virtual env is named .env
+env/
+.venv/
+
+# VSCode configs
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment variable files
+.env
+
+# Log files
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Output / data files
+*.csv
+*.tsv
+*.parquet
+*.pkl
+*.h5
+*.db
+*.sqlite3

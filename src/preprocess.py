@@ -2,8 +2,11 @@ import pandas as pd
 import sys
 import yaml
 import os
+import pickle as pk
+
 print("Preprocess.py")
 
+# Load parameters from params.yaml
 params= yaml.safe_load(open("params.yaml"))['preprocess']
 
 #Preprocess the data
