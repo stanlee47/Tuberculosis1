@@ -1,29 +1,80 @@
-# Tuberculosis Classification
+# Tuberculosis Survival Prediction
 
-This project is a machine learning-based application designed to classify tuberculosis cases using a dataset in CSV format. The goal is to predict whether a patient has tuberculosis based on various features in the dataset.
+This project is a machine learning-based application designed to predict the survival outcome of tuberculosis (TB) patients using clinical and demographic data. By analyzing patient attributes, the model can forecast whether an infected individual is likely to survive, helping healthcare professionals make more informed decisions.
 
-## Table of Contents
-- [Overview](#overview)
-- [Dataset](#dataset)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Model](#model)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
+---
 
-## Overview
-Tuberculosis is a serious infectious disease that primarily affects the lungs. Early and accurate diagnosis is crucial for effective treatment. This project uses machine learning techniques to classify tuberculosis cases based on patient data.
+## 🩺 Project Description
 
-## Dataset
-The dataset used for this project is in CSV format and contains the following:
-- **Features**: Various patient attributes such as age, symptoms, test results, etc.
-- **Target**: A binary label indicating whether the patient has tuberculosis (1) or not (0).
+Tuberculosis (TB) is a potentially deadly infectious disease, especially in regions with limited healthcare resources. While early detection and treatment can improve recovery rates, knowing the **survival probability** can further enhance patient care strategies.
 
-Ensure the dataset is preprocessed and cleaned before training the model.
+This project applies supervised machine learning algorithms to predict patient survival outcomes based on medical records, symptoms, and test results. The goal is to assist doctors and healthcare workers in prioritizing care and improving survival rates through early risk assessment.
 
-## Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-repo/tuberculosis-classification.git
+---
 
+## 📂 Dataset
+
+The dataset is stored in CSV format and contains:
+
+- **Features**  
+  - Age  
+  - Gender  
+  - Symptoms (e.g., cough, chest pain, fever)  
+  - Test results (e.g., X-ray findings, sputum test)  
+  - Medical history  
+
+- **Target Variable**  
+  - `1` — Patient survived TB  
+  - `0` — Patient did not survive
+
+---
+
+## 💻 Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/stanlee47/Tuberculosis
+    cd tuberculosis
+    ```
+
+2. Install required dependencies:
+    ```bash
+    pip install -r req.txt
+    ```
+
+---
+
+## ⚙️ Usage
+
+1. Prepare your dataset and place it in the project directory as `data.csv`.
+2. Train the model:
+    ```bash
+    python src/train.py
+    ```
+
+The model will output whether the patient is likely to survive or not, along with the probability.
+
+---
+
+## 🧠 Model
+
+The project includes several machine learning algorithms for performance comparison:
+
+- Logistic Regression  
+- Random Forest Classifier  
+- Support Vector Machine (SVM)  
+
+Model selection is based on metrics like Accuracy, Precision, Recall, and F1-Score.
+
+
+---
+
+## 📊 Results
+
+The trained models have shown strong predictive power, with the best-performing model achieving high accuracy in predicting survival outcomes on unseen data.  
+
+Evaluation reports and confusion matrices are available in the `model/` directory.
+and experiment tracking in
+    ```
+        https://dagshub.com/stanlykurian22/Tuberculosis/experiments
+    ```
